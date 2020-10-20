@@ -1,0 +1,20 @@
+@mixin animation {
+    animation-name: slidein;
+    animation-duration: 3s;    
+}
+
+@mixin keyframes {
+    
+    @keyframes slidein {
+        from {
+            top: -5%;
+            
+        }
+        
+        to {
+            top:5%;
+            
+        }
+    }
+    
+}

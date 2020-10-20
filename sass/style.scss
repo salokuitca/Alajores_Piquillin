@@ -1,0 +1,229 @@
+@import 'colors';
+@import 'animation-mixin';
+@import 'fonts';
+@import 'extends';
+@import 'medias-queries-mixin';
+
+html {
+    scroll-behavior: smooth;
+}
+.body {
+    background-color: $background-color-body;
+    font-family: $body-font-family;
+}
+
+.header-container {
+    .banner {
+        background-image: url("../../TercerEntrega/images/nuevobanner.jpg");
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        width: 100%;
+    }
+    // img {
+    //     width: 100%;
+    //     height: 100vh;
+    // }
+    // h1{
+    //     color: $color-h1-header;
+    //     font-size: $font-size-h1;
+    //     font-weight: $font-weight-h1;
+    //     text-transform: uppercase;
+    //     position: absolute;
+    //     top: 6%;
+    //     left: 50%;
+    //     transform: translate(-50%, 0);
+    //     @include animation();
+    // }
+}
+
+.nombre {
+    color: $color-h1-header;
+    font-size: $font-size-h1;
+    font-weight: $font-weight-h1;
+    text-transform: uppercase;
+    @extend %justify-center;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, 0);
+}
+
+.menu-container{
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    z-index: 1;
+    background-color: $background-color-menu;
+    position: sticky;
+    top: 0;
+    a {
+        color: $color-a-menu;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:after {
+            content: "";
+            display: block;
+            margin: auto;
+            height: 2px;
+            width: 0px;
+            transition: all .8s;
+            }
+        
+        &:hover:after {
+            width: 100%;
+            background: #333;
+            }
+    }
+}
+
+.descripcion-general {
+    @extend %justify-center;
+    padding: 5% 20%;
+}
+.imagen-producto {
+    width: 100%;
+    padding: 20px;
+
+    &:hover {
+        transform: scale(1.1)
+    }
+}
+
+h2 {
+    padding: 10px;
+    color: $color-h2;
+    @extend %justify-center;
+}
+.precios {
+    .promo {
+        padding: 20px;
+        img {
+            width: 100%;
+        }
+    }
+}
+.tabla-precios {
+    @extend %justify-center;
+    .tabla{
+        border-collapse: collapse;
+        border-radius: 5px 5px 00;
+        overflow: hidden;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        tr {
+            border-bottom: 1px solid $tr-border-bottom;
+            
+            &:nth-child(even) {
+                background-color: $background-color-tabla-child;
+            }
+
+            &:last-of-type {
+                border-bottom: 2px solid $tr-border-bottom-last-of-type;
+            }
+            th{
+                background-color: $background-color-th;
+                @extend %estilos-tabla;
+            }
+            
+            td{
+                @extend %estilos-tabla;
+
+                ul{
+                    list-style-type: none;
+                    padding-inline-start: 0%;
+                }
+            }
+        }
+    }
+}
+
+.formulario {
+    @extend %justify-center;
+    form {
+        max-width: 370px;
+        padding: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color: $background-color-formulario;
+        input{
+            @extend %estilos-partes-formulario;
+        }
+        select {
+            @extend %estilos-partes-formulario;
+        }
+        option{
+            @extend %estilos-partes-formulario;
+        }
+        button{
+            @extend %estilos-partes-formulario;
+        }
+        textarea {
+            @extend %estilos-partes-formulario;
+        }
+        .cantidad{
+            display: flex;
+            justify-content: space-around;
+        }
+        .variedad-formulario{
+            padding:
+            10px 5px 10px 10px;
+        }
+        .checkbox{
+            position: relative;
+            bottom: 3%;
+        }
+        .enviar-pedido {
+            &:hover {
+                background-color: $hover-pedido;
+                border: 2px solid black;
+            }
+        }
+    }
+}
+
+.contacto{
+    .datos-contacto {
+        display: flex;
+        justify-content: space-around;
+        h4{
+            padding: 15px;
+            @extend %justify-center;
+        }
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $background-color-menu;
+    padding: 10px;
+}
+
+/* Animacion Titulo */
+
+@include keyframes ();
+
+/* Inicio Medias Queries */
+
+/* Mobile Style */
+
+@include mobile ();
+
+/* Tablet Style */
+
+@include tablet ();
+
+/* Desktop Style */
+
+@include desktop ();

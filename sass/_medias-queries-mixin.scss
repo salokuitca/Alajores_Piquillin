@@ -1,0 +1,59 @@
+@mixin mobile {
+    @media only screen and (max-width: 400px) {
+        .header-container img{
+           width: 100%;
+           height: 50%;
+        }
+        .header-container {
+            height: 50%
+        }
+    
+        .header-container h1 {
+            font-size: 14px;
+        }
+    
+        .menu-container a{
+            font-size: 10px;
+        }
+    
+        .envios {
+            padding: 26px;
+        }
+    
+        .footer-container {
+            justify-content: center;
+        }
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 401px) and (max-width: 960px) {
+        .muestra-productos-container img {
+            width: 33.3%;
+        }
+    
+        .header-container img {
+            height: 50%;
+        }
+    
+        .header-container h1{
+            font-size: 25px;
+            top: 5%;
+        }
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width:961px) {
+        // .secciones-variantes {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     justify-content: space-around;
+        // }
+    
+        .precio-envios div{
+            padding: 25px;
+        }
+    
+    }
+}

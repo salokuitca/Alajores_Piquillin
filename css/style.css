@@ -1,0 +1,227 @@
+.contacto .datos-contacto h4, .formulario, .tabla-precios, h2, .descripcion-general, .nombre {
+  display: flex;
+  justify-content: center;
+}
+
+.tabla-precios .tabla tr td, .tabla-precios .tabla tr th {
+  text-align: center;
+  padding: 10px;
+}
+
+.formulario form textarea, .formulario form button, .formulario form option, .formulario form select, .formulario form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  background-color: #fafafa;
+  font-family: "Quicksand", sans-serif;
+}
+
+.header-container .banner {
+  background-image: url("../../TercerEntrega/images/nuevobanner.jpg");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.nombre {
+  color: black;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  opacity: 0.5;
+  transform: translate(-50%, 0);
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-around !important;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  z-index: 1;
+  background-color: #c4c4c4;
+  position: sticky;
+  top: 0;
+}
+.menu-container a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.menu-container a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  transition: all 0.8s;
+}
+.menu-container a:hover:after {
+  width: 100%;
+  background: #333;
+}
+
+.descripcion-general {
+  padding: 5% 20%;
+}
+
+.imagen-producto {
+  width: 100%;
+  padding: 20px;
+}
+.imagen-producto:hover {
+  transform: scale(1.1);
+}
+
+h2 {
+  padding: 10px;
+  color: teal;
+}
+
+.precios .promo {
+  padding: 20px;
+}
+.precios .promo img {
+  width: 100%;
+}
+
+.tabla-precios .tabla {
+  border-collapse: collapse;
+  border-radius: 5px 5px 0;
+  overflow: hidden;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.tabla-precios .tabla tr {
+  border-bottom: 1px solid #dddddd;
+}
+.tabla-precios .tabla tr:nth-child(even) {
+  background-color: #fde6e4;
+}
+.tabla-precios .tabla tr:last-of-type {
+  border-bottom: 2px solid salmon;
+}
+.tabla-precios .tabla tr th {
+  background-color: coral;
+}
+.tabla-precios .tabla tr td ul {
+  list-style-type: none;
+  padding-inline-start: 0%;
+}
+
+.formulario form {
+  max-width: 370px;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: #fde6e4;
+}
+.formulario form .cantidad {
+  display: flex;
+  justify-content: space-around;
+}
+.formulario form .variedad-formulario {
+  padding: 10px 5px 10px 10px;
+}
+.formulario form .checkbox {
+  position: relative;
+  bottom: 3%;
+}
+.formulario form .enviar-pedido:hover {
+  background-color: palevioletred;
+  border: 2px solid black;
+}
+
+.contacto .datos-contacto {
+  display: flex;
+  justify-content: space-around;
+}
+.contacto .datos-contacto h4 {
+  padding: 15px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #c4c4c4;
+  padding: 10px;
+}
+
+/* Animacion Titulo */
+@keyframes slidein {
+  from {
+    top: -5%;
+  }
+  to {
+    top: 5%;
+  }
+}
+/* Inicio Medias Queries */
+/* Mobile Style */
+@media only screen and (max-width: 400px) {
+  .header-container img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .header-container {
+    height: 50%;
+  }
+
+  .header-container h1 {
+    font-size: 14px;
+  }
+
+  .menu-container a {
+    font-size: 10px;
+  }
+
+  .envios {
+    padding: 26px;
+  }
+
+  .footer-container {
+    justify-content: center;
+  }
+}
+/* Tablet Style */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .muestra-productos-container img {
+    width: 33.3%;
+  }
+
+  .header-container img {
+    height: 50%;
+  }
+
+  .header-container h1 {
+    font-size: 25px;
+    top: 5%;
+  }
+}
+/* Desktop Style */
+@media only screen and (min-width: 961px) {
+  .precio-envios div {
+    padding: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
