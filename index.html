@@ -21,25 +21,30 @@
     <!-- Inicio header -->
     <header class="header-container">
         <div class="banner"></div>
-        <!-- <img src="images/nuevobanner.jpg" alt="presentación" title="presentación"> -->
+       
        
 
     </header>
     <!-- Fin Header -->
     <img src="images/piquillin.svg" alt="" class="logo">
     <!-- Inicio Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light menu-container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="images/logosolo.svg" alt="" class="imagen-menu">
+                Alfajores Piquillín
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSuportedContent"
+            aria-controls="navbarSuportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse menu-container" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarSuportedContent">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#productos">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#precios">Combos</a>
+                    <a class="nav-link" href="#precios">Precios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#pedido">Pedidos</a>
@@ -52,62 +57,94 @@
                 </li>
             </ul>
         </div>
+    </div>
     </nav>
     <!-- Fin Menu -->
 
-    <div class="descripcion-general d-flex flex-wrap align-content-center text-center">
+    <!-- Inicio Párrafo descriptivo introductorio -->
+    <div class="descripcion-general">
         <h1 class="nombre">Alfajores y Bombones Artesanales Piquillín</h1>
-        <p>
+        <p class="introduccion">
             En el corazón del valle de Calamuchita crece, chiquito, dulce, y delicado.
             Nuestros alfajores y bombones también.
             Ideales para ese regalo que andabas buscando, o para calmar esa ansiedad
             que sólo un fruto de la sierra te va a calmar.
         </p>
     </div>
+    <!-- Fin Párrafo descriptivo introductorio -->
 
     <!-- Inicio Seccion Productos -->
     <section id="productos">
         <h2>Productos</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="images/vertical 1.jpg" alt="Alfajor con nuez, bombón marroc cuadrado, bombón corazón, alfajor con dulce de leche" title="productos-vertical1"
-                        class="imagen-producto">
-                </div>
-                <div class="col-md-4">
-                    <img src="images/vertical 2.jpg" alt="Alfajor de dulce de leche, bombon corazón, bombón marroc cuadrado" title="productos-vertical2"
-                        class="imagen-producto">
-                </div>
-                <div class="col-md-4">
-                    <img src="images/vertical 3.jpg" alt="Alfajor con nuez, bombón marroc cuadrado, bombón corazón, alfajor con dulce de leche" title="productos-vertical3"
-                        class="imagen-producto">
+        <div class="container d-flex flex-wrap justify-content-around">
+
+
+            <div class="card mb-4 producto">
+                <div class="d-flex justify-content-center"><img src="images/Bombones.jpeg" alt="Bombones tipo marroc en forma cuadrada y de corazón" title="Bombones-tipo-marroc" class="card-img-top">
+                    </div>
+                <div class="align-items-center card-body ">
+                    <p class="card-text text-center ">Bombon tipo "Marroc" con dos capas de chocolate con leche y
+                        una de mani</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <img src="images/Dulce de leche.jpeg" alt="Alfajor de dulce de leche" title="Alfajor-dulce-de-leche"
-                        class="imagen-producto">
+
+            <div class="card mb-4 producto">
+                <div class="d-flex justify-content-center"><img src="images/Dulce de leche.jpeg" alt="Alfajor de dulce de leche" title="Alfajor-dulce-de-leche" class=card-img-top>
                 </div>
-                <div class="col-sm-4">
-                    <img src="images/Bombones.jpeg" alt="Bombones tipo marroc en forma cuadrada y de corazón" title="Bombones-tipo-marroc"
-                        class="imagen-producto">
-                </div>
-                <div class="col-sm-4">
-                    <img src="images/Nuez.jpeg" alt="Alfajor con nuez" title="Alfajor-con-nuez" class="imagen-producto">
+                <div class="align-items-center card-body">
+                    <p class="card-text text-center">Mini Alfajor de Dulce de leche (~ 30g) ideal para ese bocadito
+                        que necesitas sin sentirte culpable </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <img src="images/9.jpg" alt="Bombones tipo marroc en forma cuadrada y de corazón" title="Bombones-marroc" class="imagen-producto">
+
+            <div class="card mb-4 producto">
+                <div class="d-flex justify-content-center"><img src="images/nuez.jpeg" alt="Alfajor con nuez" title="Alfajor-con-nuez" class="card-img-top">
                 </div>
-                <div class="col-sm-4">
-                    <img src="images/4.jpg" alt="Alfajor de dulce de leche, bombon corazón, bombón marroc cuadrado" title="Presentación-productos-horizontal" class="imagen-producto">
+                <div class="align-items-center card-body">
+                    <p class="card-text text-center">Mini Alfajor de Dulce de Leche con nuez</p>
                 </div>
-                <div class="col-sm-4">
-                    <img src="images/10.jpg" alt="Alfajor con nuez, bombón corazón, bombón marroc cuadrado" title="Presentación-3-productos" class="imagen-producto">
+            </div>
+
+            <div class="card mb-4 producto">
+                <div class="d-flex justify-content-center"><img src="images/Bombones.jpeg" alt="" class="card-img-top">
+                </div>
+                <div class="align-items-center card-body">
+                    <p class="card-text text-center">Bombon de Nutella</p>
                 </div>
             </div>
         </div>
+
+            <h4 class="subseccion-productos">Presentaciones</h4>
+            
+            <div class="container imagenes-presentaciones">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="col-8"><img src="images/x6.jpg" alt="caja con seis alfajores" title="presentacion-media-docena"></div>
+                    <div class="col-4 shadow-sm p-3 rounded descripcionCaja">
+                        <p class="text-center">Caja x6</p>
+                        <p>Excelente para quedar bien con alguien que no querés tanto como a tu mamá</p>
+                        <p class="font-weight-bold text-center">$300</p>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center">
+                    <div class="col-4 shadow-sm p-3 rounded descripcionCaja">
+                        <p class="text-center">Caja x12</p>
+                        <p>Ideal para un cumpleaños, "dia del [...]", o para tenerlos escondidos y no compartirlos con
+                            nadie ;) </p>
+                        <p class="font-weight-bold text-center">$550</p>
+                    </div>
+                    <div class="col-8"><img src="images/x12.jpg" alt="caja con doce alfajores" title="presentacion-docena"></div>
+                </div>
+                <div class="row d-flex align-items-center">
+                    <div class="col-8"><img src="images/x12 2.jpg" alt="caja con veinticuatro alfajores" title="presentacion-veintucuatro-alfajores"></div>
+                    <div class="col-4 shadow-sm p-3 rounded descripcionCaja">
+                        <h5 class="text-center">Caja x24</h5>
+                        <p>Si caés con esta caja, garantizamos eterna gratitud del receptor, o te devolvemos tu dinero
+                        </p>
+                        <p class="font-weight-bold text-center">$1000</p>
+                    </div>
+                </div>
+            </div>
+
     </section>
     <!-- Fin Seccion Productos -->
 
@@ -117,93 +154,33 @@
         <div class="precio-envios">
             <!-- Inicio Seccion Precios -->
             <section id="precios" class="precios">
-                <h2>Combos</h2>
-
-                <div class="container promo">
-                    <div class="row">
-                        <div class="col">
-                            <img src="images/4.jpg" alt="Promo 1 de mix de productos" title="Pormo1">
-                        </div>
-                        <div class="col d-flex flex-wrap align-content-center">
-                            <p> Descripcion de la promo </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container promo">
-                    <div class="row">
-                        <div class="col d-flex flex-wrap align-content-center justify-content-end">
-                            <p> Descripcion de la promo </p>
-                        </div>
-                        <div class="col">
-                            <img src="images/4.jpg" alt="Promo 2 de mix de productos" title="Promo2">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container promo">
-                    <div class="row">
-                        <div class="col">
-                            <img src="images/4.jpg" alt="Promo 3 de mix de productos" title="Promo3">
-                        </div>
-                        <div class="col d-flex flex-wrap align-content-center">
-                            <p> Descripcion de la promo </p>
-                        </div>
-                    </div>
-                </div>
+                <h2>Precios</h2>
 
                 <div class="tabla-precios">
                     <table class="tabla">
                         <tr>
-                            <th>Tipos de Alfajores</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
+                            <th>Variedad</th>
+                            <th>x6</th>
+                            <th>x12</th>
+                            <th>x24</th>
                         </tr>
                         <tr>
                             <td>Dulce de leche</td>
-                            <td>
-                                <ul>
-                                    <li>6</li>
-                                    <li>12</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>$250</li>
-                                    <li>$400</li>
-                                </ul>
-                            </td>
+                            <td>$300</td>
+                            <td>$550</td>
+                            <td>$1000</td>
                         </tr>
                         <tr>
                             <td>Nuez</td>
-                            <td>
-                                <ul>
-                                    <li>6</li>
-                                    <li>12</li>
-                                </ul>
-
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>$280</li>
-                                    <li>$450</li>
-                                </ul>
-
-                            </td>
+                            <td>$350</td>
+                            <td>$600</td>
+                            <td>$1000</td>
                         </tr>
                         <tr>
                             <td>Bombones</td>
-                            <td>
-                                <ul>
-                                    <li>6</li>
-                                    <li>12</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>$200</li>
-                                    <li>$350</li>
-                                </ul>
-                            </td>
+                            <td>$250</td>
+                            <td>$450</td>
+                            <td>$800</td>
                         </tr>
                     </table>
                 </div>

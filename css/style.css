@@ -1,4 +1,4 @@
-.contacto .datos-contacto h4, .formulario, .tabla-precios, h2, .descripcion-general, .nombre {
+.contacto .datos-contacto h4, .formulario, .tabla-precios, h2 {
   display: flex;
   justify-content: center;
 }
@@ -20,13 +20,13 @@ html {
 }
 
 .body {
-  background-color: #fafafa;
+  background-color: white;
   font-family: "Quicksand", sans-serif;
 }
 
 .header-container .banner {
-  background-image: url("../../TercerEntrega/images/nuevobanner.jpg");
-  height: 100vh;
+  background-image: url("../../CuartaEntrega/images/00banner.jpg");
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,39 +35,28 @@ html {
   width: 100%;
 }
 
-.nombre {
-  color: black;
-  font-size: 32px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
 .logo {
   position: absolute;
-  left: 50%;
-  top: 0;
-  width: 50%;
+  top: -100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
   opacity: 0.5;
-  transform: translate(-50%, 0);
 }
 
-.menu-container {
-  display: flex;
-  justify-content: space-around !important;
-  align-items: center;
-  list-style: none;
-  padding: 10px;
-  z-index: 1;
-  background-color: #c4c4c4;
-  position: sticky;
-  top: 0;
+.imagen-menu {
+  width: 45px;
+  height: 45px;
 }
-.menu-container a {
+
+li a {
   color: black;
-  text-transform: uppercase;
   text-decoration: none;
 }
-.menu-container a:after {
+li a:after {
   content: "";
   display: block;
   margin: auto;
@@ -75,21 +64,46 @@ html {
   width: 0px;
   transition: all 0.8s;
 }
-.menu-container a:hover:after {
+li a:hover:after {
   width: 100%;
   background: #333;
 }
 
 .descripcion-general {
-  padding: 5% 20%;
+  padding: 100px;
+}
+.descripcion-general .nombre {
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: x-large;
+}
+.descripcion-general .introduccion {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
 }
 
-.imagen-producto {
-  width: 100%;
-  padding: 20px;
+.producto {
+  max-width: 400px;
 }
-.imagen-producto:hover {
+.producto:hover {
   transform: scale(1.1);
+}
+
+.subseccion-productos {
+  padding: 10px 0 5px 0;
+  margin-top: 30px !important;
+  text-align: center;
+}
+
+.imagenes-presentaciones img {
+  margin: 30px;
+  max-width: 90%;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -123,11 +137,6 @@ h2 {
 .tabla-precios .tabla tr th {
   background-color: coral;
 }
-.tabla-precios .tabla tr td ul {
-  list-style-type: none;
-  padding-inline-start: 0%;
-}
-
 .formulario form {
   max-width: 370px;
   padding: 15px;

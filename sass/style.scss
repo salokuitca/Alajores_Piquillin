@@ -14,8 +14,8 @@ html {
 
 .header-container {
     .banner {
-        background-image: url("../../TercerEntrega/images/nuevobanner.jpg");
-        height: 100vh;
+        background-image: url("../../../images/00banner.jpg");
+        height: 90vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -23,53 +23,26 @@ html {
         background-size: cover;
         width: 100%;
     }
-    // img {
-    //     width: 100%;
-    //     height: 100vh;
-    // }
-    // h1{
-    //     color: $color-h1-header;
-    //     font-size: $font-size-h1;
-    //     font-weight: $font-weight-h1;
-    //     text-transform: uppercase;
-    //     position: absolute;
-    //     top: 6%;
-    //     left: 50%;
-    //     transform: translate(-50%, 0);
-    //     @include animation();
-    // }
+    
 }
 
-.nombre {
-    color: $color-h1-header;
-    font-size: $font-size-h1;
-    font-weight: $font-weight-h1;
-    text-transform: uppercase;
-    @extend %justify-center;
-}
 
 .logo {
     position: absolute;
-    left: 50%;
-    top: 0;
-    width: 50%;
+    top: -100px; left: 0; right:0; bottom:0;
+    margin: auto;
+    width: 100%;
+    max-width: 600px; //Ver si ponerlo con media querie para cuand se da vuelta la imagen en cel
     opacity: 0.5;
-    transform: translate(-50%, 0);
 }
 
-.menu-container{
-    display: flex;
-    justify-content: space-around !important;
-    align-items: center;
-    list-style: none;
-    padding: 10px;
-    z-index: 1;
-    background-color: $background-color-menu;
-    position: sticky;
-    top: 0;
+.imagen-menu {
+    width: 45px;
+    height: 45px;
+}
+li{
     a {
         color: $color-a-menu;
-        text-transform: uppercase;
         text-decoration: none;
 
         &:after {
@@ -87,17 +60,42 @@ html {
             }
     }
 }
-
 .descripcion-general {
-    @extend %justify-center;
-    padding: 5% 20%;
+    padding: 100px;
+    .nombre{
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: $font-weight-h1;
+        font-size: $font-size-h1;
+    }
+    .introduccion{
+        position: relative;
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+    }
 }
-.imagen-producto {
-    width: 100%;
-    padding: 20px;
+.producto {
+    max-width: 400px;
 
     &:hover {
         transform: scale(1.1)
+    }
+}
+
+.subseccion-productos{
+    padding: 10px 0 5px 0 ;
+    margin-top: 30px !important;
+    text-align: center;
+}
+
+.imagenes-presentaciones {
+    img {
+        margin: 30px;
+        max-width: 90%;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -139,11 +137,6 @@ h2 {
             
             td{
                 @extend %estilos-tabla;
-
-                ul{
-                    list-style-type: none;
-                    padding-inline-start: 0%;
-                }
             }
         }
     }
