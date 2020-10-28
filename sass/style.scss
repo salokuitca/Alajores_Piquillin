@@ -34,6 +34,7 @@ html {
     width: 100%;
     max-width: 600px; //Ver si ponerlo con media querie para cuand se da vuelta la imagen en cel
     opacity: 0.5;
+    @include animation ();
 }
 
 .imagen-menu {
@@ -61,7 +62,7 @@ li{
     }
 }
 .descripcion-general {
-    padding: 100px;
+    margin: 6vw;
     .nombre{
         margin: 10px;
         width: 100%;
@@ -90,6 +91,7 @@ li{
     margin-top: 30px !important;
     text-align: center;
 }
+
 
 .imagenes-presentaciones {
     img {
@@ -143,6 +145,14 @@ h2 {
 }
 
 .formulario {
+    max-width: 700px !important;
+    background-color: $background-color-formulario;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 5px 0 0;
+
+
+}
+/*.formulario {
     @extend %justify-center;
     form {
         max-width: 370px;
@@ -183,17 +193,19 @@ h2 {
             }
         }
     }
-}
+}*/
 
-.contacto{
-    .datos-contacto {
-        display: flex;
-        justify-content: space-around;
-        h4{
-            padding: 15px;
-            @extend %justify-center;
-        }
-    }
+// .datos-contactos {
+//     @extend %justify-center;
+//     img {
+//          max-width: 200px;
+//     }
+// }
+.imagen-contacto {
+    width: 200px;
+    padding: 20px;
+    
+
 }
 
 .footer-container {

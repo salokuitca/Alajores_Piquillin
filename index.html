@@ -8,6 +8,9 @@
     <meta name="description" content="Alfajores y Bombones artesanales en el valle de Calamuchita, Córdoba, Argentina. Ideal para regalos, desayunos y meriendas.">
     <meta name="keywords" content="Alfajores artesanales Bombones Chocolates alfajor cordobes Córdoba dulces Calamuchita Villa General Belgrano desayuno merienda regalo colación">
     <title>Piquillin Alfajores Artesanales</title>
+    <!-- Link a Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Link a bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -63,8 +66,8 @@
 
     <!-- Inicio Párrafo descriptivo introductorio -->
     <div class="descripcion-general">
-        <h1 class="nombre">Alfajores y Bombones Artesanales Piquillín</h1>
-        <p class="introduccion">
+        <h1 data-aos="fade-right" class="nombre">Alfajores y Bombones Artesanales Piquillín</h1>
+        <p data-aos="fade-left" class="introduccion">
             En el corazón del valle de Calamuchita crece, chiquito, dulce, y delicado.
             Nuestros alfajores y bombones también.
             Ideales para ese regalo que andabas buscando, o para calmar esa ansiedad
@@ -74,7 +77,7 @@
     <!-- Fin Párrafo descriptivo introductorio -->
 
     <!-- Inicio Seccion Productos -->
-    <section id="productos">
+    <main id="productos">
         <h2>Productos</h2>
         <div class="container d-flex flex-wrap justify-content-around">
 
@@ -118,26 +121,26 @@
             
             <div class="container imagenes-presentaciones">
                 <div class="row d-flex align-items-center justify-content-center">
-                    <div class="col-8"><img src="images/x6.jpg" alt="caja con seis alfajores" title="presentacion-media-docena"></div>
-                    <div class="col-4 shadow-sm p-3 rounded descripcionCaja">
-                        <p class="text-center">Caja x6</p>
+                    <div data-aos="zoom-in-right" class="col-8"><img src="images/x6.jpg" alt="caja con seis alfajores" title="presentacion-media-docena"></div>
+                    <div class="col-4 shadow-sm p-3 rounded descripcion-caja">
+                        <p class="font-weight-bold text-center">Caja x6</p>
                         <p>Excelente para quedar bien con alguien que no querés tanto como a tu mamá</p>
                         <p class="font-weight-bold text-center">$300</p>
                     </div>
                 </div>
                 <div class="row d-flex align-items-center">
-                    <div class="col-4 shadow-sm p-3 rounded descripcionCaja">
-                        <p class="text-center">Caja x12</p>
+                    <div class="col-4 shadow-sm p-3 rounded descripcion-caja">
+                        <p class="font-weight-bold text-center">Caja x12</p>
                         <p>Ideal para un cumpleaños, "dia del [...]", o para tenerlos escondidos y no compartirlos con
                             nadie ;) </p>
                         <p class="font-weight-bold text-center">$550</p>
                     </div>
-                    <div class="col-8"><img src="images/x12.jpg" alt="caja con doce alfajores" title="presentacion-docena"></div>
+                    <div data-aos="zoom-in-left" class="col-8"><img src="images/x12.jpg" alt="caja con doce alfajores" title="presentacion-docena"></div>
                 </div>
                 <div class="row d-flex align-items-center">
-                    <div class="col-8"><img src="images/x12 2.jpg" alt="caja con veinticuatro alfajores" title="presentacion-veintucuatro-alfajores"></div>
-                    <div class="col-4 shadow-sm p-3 rounded descripcionCaja">
-                        <h5 class="text-center">Caja x24</h5>
+                    <div data-aos="zoom-in-right" class="col-8"><img src="images/x12 2.jpg" alt="caja con veinticuatro alfajores" title="presentacion-veintucuatro-alfajores"></div>
+                    <div class="col-4 shadow-sm p-3 rounded descripcion-caja">
+                        <p class="font-weight-bolt text-center">Caja x24</p>
                         <p>Si caés con esta caja, garantizamos eterna gratitud del receptor, o te devolvemos tu dinero
                         </p>
                         <p class="font-weight-bold text-center">$1000</p>
@@ -145,7 +148,7 @@
                 </div>
             </div>
 
-    </section>
+    </main>
     <!-- Fin Seccion Productos -->
 
 
@@ -190,6 +193,10 @@
             <!-- Inicio Seccion Envios -->
             <section id="envios" class="envios">
                 <h2>Envíos</h2>
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div>
+                        <img src="images/delivery.svg" alt="" class="img-fluid">
+                    </div>
                 <div class="tabla-precios">
                     <ul>
                         <li>Villa Rumipal</li>
@@ -198,13 +205,93 @@
                         <li>Villa General Belgrano</li>
                     </ul>
                 </div>
+            </div>
             </section>
             <!-- Fin Seccion Envios -->
         </div>
         <!-- Inicio Seccion Pedido -->
         <section id="pedido" class="pedido">
             <h2>Pedidos</h2>
-            <div class="formulario">
+            <div id=pedidos class="pedidos Secciones container">
+
+                <form action="" class="formulario container">
+                    <div class="form-group">
+                        <label for="">Nombre</label>
+                        <input type="text" class="form-control"><br>
+    
+                        <label for="">Whatsapp</label>
+                        <input type="number" class="form-control"><br>
+    
+    
+                    </div>
+                    <p class="seleccion">Seleccionar Cantidades</p>
+                    <div class="form-inline d-flex justify-content-around">
+    
+    
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">DDL</label>
+                                    <input type="number" class="cantidad form-control ">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">NUEZ</label>
+                                    <input type="number" class="cantidad form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">MARROC</label>
+                                    <input type="number" class="cantidad form-control"><br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">NUTELLA</label>
+                                    <input type="number" class="cantidad form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+    
+                    <p>Lugar de Envío</p>
+                    <div class="form-group d-flex justify-content-center flex-wrap">
+                        <div>
+                            <label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa General
+                                Belgrano</label>
+                            <label class="radio-inline pr-3"><input type="radio" name="optradio"> Santa Rosa de
+                                Calamuchita</label>
+                        </div>
+                        <div>
+                            <label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa Rumipal</label>
+                            <label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa del Dique</label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="">Forma de Pago</label>
+                        <select name="" id="" class="form-control">
+                            <option value="E">Efectivo</option>
+                            <option value="MP">Mercado Pago</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="">Direccion de entrega</label>
+                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea> <br>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button class="btn btn-primary text-center">Enviar Pedido</button>
+                    </div>
+                </form>
+    
+            </div>
+            <!-- <div class="formulario">
                 <form action="">
                     <label for="">Nombre y Apellido:</label>
                     <input type="text"> <br>
@@ -253,7 +340,7 @@
 
                 </form>
 
-            </div>
+            </div> -->
         </section>
         <!-- Fin Seccion Pedido -->
     </div>
@@ -262,10 +349,15 @@
     <!-- Inicio Seccion Contacto -->
     <section id="contacto" class="contacto">
         <h2>Contacto</h2>
-        <div class="datos-contacto">
-            <h4>Whatsapp</h4>
-            <h4>E-mail</h4>
-            <h4>Instagram</h4>
+        
+            <p class="text-center">Conectate con nosotros!</p>
+        <div class="container datos-contacto d-flex justify-content-between">
+                <a href=""><img src="images/fb.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href=""><img src="images/ig.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href=""><img src="images/wpp.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href=""><img src="images/gmail.svg" alt="" class="imagen-contacto img-fluid"></a>
+            </div>
+
         </div>
     </section>
     <!-- Fin Seccion Contacto -->
@@ -286,6 +378,9 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script>
+        AOS.init();
     </script>
 </body>
 

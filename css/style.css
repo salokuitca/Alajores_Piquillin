@@ -1,4 +1,4 @@
-.contacto .datos-contacto h4, .formulario, .tabla-precios, h2 {
+.tabla-precios, h2 {
   display: flex;
   justify-content: center;
 }
@@ -6,13 +6,6 @@
 .tabla-precios .tabla tr td, .tabla-precios .tabla tr th {
   text-align: center;
   padding: 10px;
-}
-
-.formulario form textarea, .formulario form button, .formulario form option, .formulario form select, .formulario form input {
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 html {
@@ -45,6 +38,8 @@ html {
   width: 100%;
   max-width: 600px;
   opacity: 0.5;
+  animation-name: slidein;
+  animation-duration: 3s;
 }
 
 .imagen-menu {
@@ -70,7 +65,7 @@ li a:hover:after {
 }
 
 .descripcion-general {
-  padding: 100px;
+  margin: 6vw;
 }
 .descripcion-general .nombre {
   margin: 10px;
@@ -137,34 +132,58 @@ h2 {
 .tabla-precios .tabla tr th {
   background-color: coral;
 }
-.formulario form {
-  max-width: 370px;
-  padding: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+.formulario {
+  max-width: 700px !important;
   background-color: #fde6e4;
-}
-.formulario form .cantidad {
-  display: flex;
-  justify-content: space-around;
-}
-.formulario form .variedad-formulario {
-  padding: 10px 5px 10px 10px;
-}
-.formulario form .checkbox {
-  position: relative;
-  bottom: 3%;
-}
-.formulario form .enviar-pedido:hover {
-  background-color: palevioletred;
-  border: 2px solid black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px 5px 0 0;
 }
 
-.contacto .datos-contacto {
-  display: flex;
-  justify-content: space-around;
-}
-.contacto .datos-contacto h4 {
-  padding: 15px;
+/*.formulario {
+    @extend %justify-center;
+    form {
+        max-width: 370px;
+        padding: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color: $background-color-formulario;
+        input{
+            @extend %estilos-partes-formulario;
+        }
+        select {
+            @extend %estilos-partes-formulario;
+        }
+        option{
+            @extend %estilos-partes-formulario;
+        }
+        button{
+            @extend %estilos-partes-formulario;
+        }
+        textarea {
+            @extend %estilos-partes-formulario;
+        }
+        .cantidad{
+            display: flex;
+            justify-content: space-around;
+        }
+        .variedad-formulario{
+            padding:
+            10px 5px 10px 10px;
+        }
+        .checkbox{
+            position: relative;
+            bottom: 3%;
+        }
+        .enviar-pedido {
+            &:hover {
+                background-color: $hover-pedido;
+                border: 2px solid black;
+            }
+        }
+    }
+}*/
+.imagen-contacto {
+  width: 200px;
+  padding: 20px;
 }
 
 .footer-container {
@@ -177,30 +196,38 @@ h2 {
 /* Animacion Titulo */
 @keyframes slidein {
   from {
-    top: -5%;
+    opacity: 0;
   }
   to {
-    top: 5%;
+    opacity: 0.5;
   }
 }
 /* Inicio Medias Queries */
 /* Mobile Style */
 @media only screen and (max-width: 400px) {
-  .header-container img {
-    width: 100%;
-    height: 50%;
+  /*.header-container img{
+     width: 100%;
+     height: 50%;
+  }*/
+  /*.header-container {
+      height: 50%
+  }*/
+  /*.header-container h1 {
+      font-size: 14px;
+  }*/
+  /*.menu-container a{
+      font-size: 10px;
+  }*/
+  .imagenes-presentaciones img {
+    margin: 5px;
   }
 
-  .header-container {
-    height: 50%;
+  .descripcion-caja p {
+    font-size: smaller;
   }
 
-  .header-container h1 {
-    font-size: 14px;
-  }
-
-  .menu-container a {
-    font-size: 10px;
+  .tabla-precios .tabla {
+    min-width: 200px;
   }
 
   .envios {
