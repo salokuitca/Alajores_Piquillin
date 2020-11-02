@@ -1,21 +1,8 @@
+@import 'webkit-mixin';
+
 @mixin mobile {
     @media only screen and (max-width: 400px) {
-        /*.header-container img{
-           width: 100%;
-           height: 50%;
-        }*/
-        /*.header-container {
-            height: 50%
-        }*/
-    
-        /*.header-container h1 {
-            font-size: 14px;
-        }*/
-    
-        /*.menu-container a{
-            font-size: 10px;
-        }*/
-
+        
         .imagenes-presentaciones {
             img {
                 margin: 5px;
@@ -61,12 +48,13 @@
 
 @mixin desktop {
     @media only screen and (min-width:961px) {
-        // .secciones-variantes {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     justify-content: space-around;
-        // }
-    
+        .producto {        
+            &:hover {
+                @include transform ();
+                @include transition ();
+            }
+        }    
+
         .precio-envios div{
             padding: 25px;
         }

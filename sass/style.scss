@@ -80,10 +80,6 @@ li{
 }
 .producto {
     max-width: 400px;
-
-    &:hover {
-        transform: scale(1.1)
-    }
 }
 
 .subseccion-productos{
@@ -103,6 +99,7 @@ li{
 
 h2 {
     padding-top: 80px;
+    padding-bottom: 20px;
     color: $color-h2;
     @extend %justify-center;
 }
@@ -149,58 +146,12 @@ h2 {
     background-color: $background-color-formulario;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border-radius: 5px 5px 0 0;
-
-
+    
+    .lugares {
+    padding-left: 62px;
 }
-/*.formulario {
-    @extend %justify-center;
-    form {
-        max-width: 370px;
-        padding: 15px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        background-color: $background-color-formulario;
-        input{
-            @extend %estilos-partes-formulario;
-        }
-        select {
-            @extend %estilos-partes-formulario;
-        }
-        option{
-            @extend %estilos-partes-formulario;
-        }
-        button{
-            @extend %estilos-partes-formulario;
-        }
-        textarea {
-            @extend %estilos-partes-formulario;
-        }
-        .cantidad{
-            display: flex;
-            justify-content: space-around;
-        }
-        .variedad-formulario{
-            padding:
-            10px 5px 10px 10px;
-        }
-        .checkbox{
-            position: relative;
-            bottom: 3%;
-        }
-        .enviar-pedido {
-            &:hover {
-                background-color: $hover-pedido;
-                border: 2px solid black;
-            }
-        }
-    }
-}*/
+}
 
-// .datos-contactos {
-//     @extend %justify-center;
-//     img {
-//          max-width: 200px;
-//     }
-// }
 .imagen-contacto {
     width: 200px;
     padding: 20px;

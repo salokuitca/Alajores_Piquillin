@@ -82,14 +82,7 @@
         <div class="container d-flex flex-wrap justify-content-around">
 
 
-            <div class="card mb-4 producto">
-                <div class="d-flex justify-content-center"><img src="images/Bombones.jpeg" alt="Bombones tipo marroc en forma cuadrada y de corazón" title="Bombones-tipo-marroc" class="card-img-top">
-                    </div>
-                <div class="align-items-center card-body ">
-                    <p class="card-text text-center ">Bombon tipo "Marroc" con dos capas de chocolate con leche y
-                        una de mani</p>
-                </div>
-            </div>
+            
 
             <div class="card mb-4 producto">
                 <div class="d-flex justify-content-center"><img src="images/Dulce de leche.jpeg" alt="Alfajor de dulce de leche" title="Alfajor-dulce-de-leche" class=card-img-top>
@@ -109,7 +102,16 @@
             </div>
 
             <div class="card mb-4 producto">
-                <div class="d-flex justify-content-center"><img src="images/Bombones.jpeg" alt="" class="card-img-top">
+                <div class="d-flex justify-content-center"><img src="images/marroc.jpg" alt="Bombones tipo marroc en forma cuadrada y de corazón" title="Bombones-tipo-marroc" class="card-img-top">
+                    </div>
+                <div class="align-items-center card-body ">
+                    <p class="card-text text-center ">Bombon tipo "Marroc" con dos capas de chocolate con leche y
+                        una de mani</p>
+                </div>
+            </div>
+
+            <div class="card mb-4 producto">
+                <div class="d-flex justify-content-center"><img src="images/nutella.jpg" alt="" class="card-img-top">
                 </div>
                 <div class="align-items-center card-body">
                     <p class="card-text text-center">Bombon de Nutella</p>
@@ -216,7 +218,7 @@
 
                 <form action="" class="formulario container">
                     <div class="form-group">
-                        <label for="">Nombre</label>
+                        <label for="" class="py-2">Nombre</label>
                         <input type="text" class="form-control"><br>
     
                         <label for="">Whatsapp</label>
@@ -260,17 +262,18 @@
                     <br>
     
                     <p>Lugar de Envío</p>
-                    <div class="form-group d-flex justify-content-center flex-wrap">
-                        <div>
-                            <label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa General
-                                Belgrano</label>
-                            <label class="radio-inline pr-3"><input type="radio" name="optradio"> Santa Rosa de
-                                Calamuchita</label>
-                        </div>
-                        <div>
-                            <label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa Rumipal</label>
-                            <label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa del Dique</label>
-                        </div>
+                    <div>
+                        <div class="container form-group d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-sm-12 col-md-6 lugares"><label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa General
+                                Belgrano</label></div>
+                              <div class="col-sm-12 col-md-6 lugares"><label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa Rumipal </label></div>
+                              <div class="w-100"></div>
+                              <div class="col-sm-12 col-md-6 lugares"><label class="radio-inline pr-3"><input type="radio" name="optradio"> Santa Rosa de
+                                Calamuchita </label></div>
+                              <div class="col-sm-12 col-md-6 lugares"><label class="radio-inline pr-3"><input type="radio" name="optradio"> Villa del Dique</label></div>
+                            </div>
+                          </div>
                     </div>
     
                     <div class="form-group">
@@ -286,61 +289,12 @@
                         <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea> <br>
                     </div>
                     <div class="col-md-12 text-center">
-                        <button class="btn btn-primary text-center">Enviar Pedido</button>
+                        <button class="btn btn-primary text-center mb-4">Enviar Pedido</button>
                     </div>
                 </form>
     
             </div>
-            <!-- <div class="formulario">
-                <form action="">
-                    <label for="">Nombre y Apellido:</label>
-                    <input type="text"> <br>
-
-                    <label for="">Whatsapp:</label>
-                    <input type="number" name="" id=""> <br>
-
-                    <div class="cantidad">
-
-                        <label for="" class="variedad-formulario">DDL</label>
-                        <input type="number" name="" id=""> <br>
-
-                        <label for="" class="variedad-formulario">Bombon</label>
-                        <input type="number" name="" id=""> <br>
-
-                        <label for="" class="variedad-formulario">Nuez</label>
-                        <input type="number" name="" id=""> <br>
-
-                    </div>
-
-                    <label for="">Dirección de entrega:</label> <br>
-                    <textarea name="" id="" cols="30" rows="10"
-                        placeholder="Agregar indicaciones si es necesario"></textarea> <br>
-
-                    <label for="">Seleccionar franja horaria para el envío</label> <br> <br>
-                    <label for="">Mañana</label>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" id="">
-                    </div>
-                    <label for="">Tarde</label>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" id="">
-                    </div>
-                    <label for="">Noche</label>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" id="">
-                    </div>
-                    <label for="">Forma de pago:</label>
-                    <select name="pago" id="">
-                        <option value="MP">Mercado Pago</option>
-                        <option value="E">Efectivo en la entrega</option>
-                    </select>
-
-                    <button class="enviar-pedido">Enviar</button>
-
-
-                </form>
-
-            </div> -->
+            
         </section>
         <!-- Fin Seccion Pedido -->
     </div>
@@ -352,10 +306,10 @@
         
             <p class="text-center">Conectate con nosotros!</p>
         <div class="container datos-contacto d-flex justify-content-between">
-                <a href=""><img src="images/fb.svg" alt="" class="imagen-contacto img-fluid"></a>
-                <a href=""><img src="images/ig.svg" alt="" class="imagen-contacto img-fluid"></a>
-                <a href=""><img src="images/wpp.svg" alt="" class="imagen-contacto img-fluid"></a>
-                <a href=""><img src="images/gmail.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href="https://www.facebook.com/alfajores.piquillin/" target="_blank"><img src="images/fb.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href="https://www.instagram.com/alfajores.piquillin/" target="_blank"><img src="images/ig.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href="https://wa.link/ymytcm" target="_blank"><img src="images/wpp.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href="mailto:alfajorespiquillin@gmail.com" target="_blank"><img src="images/gmail.svg" alt="" class="imagen-contacto img-fluid"></a>
             </div>
 
         </div>
@@ -379,6 +333,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+    <!-- JS Animacion -->
     <script>
         AOS.init();
     </script>
