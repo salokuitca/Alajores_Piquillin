@@ -22,6 +22,7 @@
 </head>
 
 <body class="body">
+    <div class="loader"></div>
     <!-- Inicio header -->
     <header class="header-container">
         <div class="banner"></div>
@@ -32,7 +33,7 @@
     <!-- Fin Header -->
     <img src="images/piquillin.svg" alt="" class="logo">
     <!-- Inicio Menu -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow-sm">
         <div class="container">
             <a href="#" class="navbar-brand">
                 <img src="images/logosolo.svg" alt="" class="imagen-menu">
@@ -193,21 +194,67 @@
             </section>
             <!-- Fin Seccion Precios -->
 
-            <!-- Inicio Seccion Envios -->
-            <section id="envios" class="envios">
-                <h2>Envíos</h2>
-                <div class="container d-flex justify-content-center align-items-center">
-                    <div>
-                        <img src="images/delivery.svg" alt="" class="img-fluid">
+            <div data-aos="zoom-in-up" data-aos-delay="5000" class="container d-flex justify-content-center mt-5">
+                <button type="button" class="btn btn-warning m-3" data-toggle="modal" data-target="#exampleModalCenter">
+                    A wild PROMO Appeared! <img src="images/promo.svg" alt="" height="50px">
+                </button>
+            </div>
+    
+    
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle"> Atrapaste una Promo! Genial!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center">
+                            <img src="images/piquibola.png" alt="" class="piquibola">
+                        </div>
+                        <div class="modal-footer justify-content-around">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Odio las Ofertas</button>
+                            <button type="button" class="btn btn-primary" onClick="promo()" data-dismiss="modal">LO QUIERO
+                                YA! </button>
+                        </div>
                     </div>
-                <div class="tabla-precios">
-                    <ul>
-                        <li>Villa Rumipal</li>
-                        <li>Villa del Dique</li>
-                        <li>Santa Rosa de Calamuchita</li>
-                        <li>Villa General Belgrano</li>
-                    </ul>
                 </div>
+            </div>
+
+            <!-- Inicio Seccion Envios -->
+            <section id="envios" >
+                <h2>Envíos</h2>
+                <div class="container d-flex justify-content-center align-items-center flex-wrap">
+                <div class="p-3">
+                    <img src="./images/delivery.svg" class="img-fluid" alt="">
+                </div>
+    
+                <div class="envios">
+    
+                    <div class="Lista-Ciudades">
+                        
+                            <div class=" p-2 lugar"> <img src="images/pin.svg" alt="" class="pin"> Sta Rosa de Calamuchita . . .  $ 70 </div>
+                                            
+                       
+                            <div class=" p-2 lugar"> <img src="images/pin.svg" alt="" class="pin"> Villa General Belgrano  . . . . . .  $ 80
+                            </div>
+                            
+                                           
+                            <div class=" p-2 lugar"> <img src="images/pin.svg" alt="" class="pin"> Villa del Dique . . . . . . . . . . . . . . $ 60</div> 
+                            
+                            <div class=" p-2 lugar"> <img src="images/pin.svg" alt="" class="pin"> Villa Rumipal . . . . . . . . . . . . . . .  $ 50 </div>
+                            
+                        
+                    </div>
+    
+                </div>
+    
+    
+    
+    
             </div>
             </section>
             <!-- Fin Seccion Envios -->
@@ -220,10 +267,9 @@
                 <form action="" class="formulario container">
                     <div class="form-group">
                         <label for="" class="py-2">Nombre</label>
-                        <input type="text" class="form-control"><br>
-    
+                        <input type="text" class="form-control">
                         <label for="">Whatsapp</label>
-                        <input type="number" class="form-control"><br>
+                        <input type="number" class="form-control">
     
     
                     </div>
@@ -249,19 +295,18 @@
                             <div class="row">
                                 <div class="col">
                                     <label for="">MARROC</label>
-                                    <input type="number" class="cantidad form-control"><br>
+                                    <input type="number" class="cantidad form-control">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label for="">NUTELLA</label>
-                                    <input type="number" class="cantidad form-control"><br>
+                                    <input type="number" class="cantidad form-control">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <br>
-    
+                    
                     <p>Lugar de Envío</p>
                     <div>
                         <div class="container form-group d-flex flex-wrap">
@@ -287,7 +332,7 @@
     
                     <div class="form-group">
                         <label for="">Direccion de entrega</label>
-                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea> <br>
+                        <textarea name="" id="descripcion-dire" value="" cols="30" rows="10" class="form-control"></textarea> 
                     </div>
                     <div class="col-md-12 text-center">
                         <button class="btn btn-primary text-center mb-4">Enviar Pedido</button>
@@ -307,10 +352,10 @@
         
             <p class="text-center">Conectate con nosotros!</p>
         <div class="container datos-contacto d-flex justify-content-between">
-                <a href="https://www.facebook.com/alfajores.piquillin/" target="_blank"><img src="images/fb.svg" alt="" class="imagen-contacto img-fluid"></a>
-                <a href="https://www.instagram.com/alfajores.piquillin/" target="_blank"><img src="images/ig.svg" alt="" class="imagen-contacto img-fluid"></a>
-                <a href="https://wa.link/ymytcm" target="_blank"><img src="images/wpp.svg" alt="" class="imagen-contacto img-fluid"></a>
-                <a href="mailto:alfajorespiquillin@gmail.com" target="_blank"><img src="images/gmail.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href="https://www.facebook.com/alfajores.piquillin/" target="_blank" class="social"><img src="images/fb.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href="https://www.instagram.com/alfajores.piquillin/" target="_blank" class="social"><img src="images/ig.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href="https://wa.link/ymytcm" target="_blank" class="social"><img src="images/wpp.svg" alt="" class="imagen-contacto img-fluid"></a>
+                <a href="mailto:alfajorespiquillin@gmail.com" target="_blank" class="social"><img src="images/gmail.svg" alt="" class="imagen-contacto img-fluid"></a>
             </div>
 
         </div>
@@ -338,6 +383,9 @@
     <script>
         AOS.init();
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- JQuery para ocultar el desplegable del navbar al hacer click -->
+    <script src="script.js"></script>
 </body>
 
 </html>

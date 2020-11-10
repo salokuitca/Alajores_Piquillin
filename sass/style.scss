@@ -3,25 +3,49 @@
 @import 'fonts';
 @import 'extends';
 @import 'medias-queries-mixin';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden !important;
 }
 .body {
     background-color: $background-color-body;
     font-family: $body-font-family;
+    overflow-x: hidden !important;
+}
+
+/* Aumento de segundo en animate on scroll del modal promo */
+.body [data-aos-delay='5000'] [data-aos],
+[data-aos][data-aos][data-aos-delay='5000'] {
+  transition-delay: 5000ms;
+}
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../images/alfajor.gif') 50% 50% no-repeat rgb(249,249,249);
+    background-size: cover;
 }
 
 .header-container {
     .banner {
         background-image: url("../images/00banner.jpg");
-        height: 90vh;
+        height: calc(100vh - 70px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background-size: cover;
         width: 100%;
+        margin-top: 70px;
     }
     
 }
@@ -29,7 +53,7 @@ html {
 
 .logo {
     position: absolute;
-    top: -100px; left: 0; right:0; bottom:0;
+    top: 90px; left: 0; right:0; bottom:0;
     margin: auto;
     width: 100%;
     max-width: 600px; //Ver si ponerlo con media querie para cuand se da vuelta la imagen en cel
@@ -41,26 +65,7 @@ html {
     width: 45px;
     height: 45px;
 }
-li{
-    a {
-        color: $color-a-menu;
-        text-decoration: none;
 
-        &:after {
-            content: "";
-            display: block;
-            margin: auto;
-            height: 2px;
-            width: 0px;
-            transition: all .8s;
-            }
-        
-        &:hover:after {
-            width: 100%;
-            background: #333;
-            }
-    }
-}
 .descripcion-general {
     margin: 6vw;
     .nombre{
@@ -143,6 +148,14 @@ h2 {
     }
 }
 
+.piquibola {
+    width: 100%;
+}
+
+.pin {
+    width: 20px;
+}
+
 .formulario {
     max-width: 700px !important;
     background-color: $background-color-formulario;
@@ -153,12 +166,21 @@ h2 {
     padding-left: 62px;
 }
 }
+.social {
+    
+    @include transition-hover-social (); 
+  }
+  .social:hover {
+    
+    @include tansform-hover-social ();
+    filter: opacity(90%);
+    margin: 0 10px ;
+
+  }
 
 .imagen-contacto {
     width: 200px;
     padding: 20px;
-    
-
 }
 
 .footer-container {

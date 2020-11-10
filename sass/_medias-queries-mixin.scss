@@ -11,17 +11,16 @@
 
         .descripcion-caja {
             p{
-                font-size: smaller;
+                font-size: $font-size-mobile;
             }
         }
+       
         .tabla-precios {
         .tabla {
             min-width: 200px;
         }
         }
-        .envios {
-            padding: 26px;
-        }
+        
     
         .footer-container {
             justify-content: center;
@@ -48,6 +47,26 @@
 
 @mixin desktop {
     @media only screen and (min-width:961px) {
+        li{
+            a {
+                color: $color-a-menu;
+                text-decoration: none;
+        
+                &:after {
+                    content: "";
+                    display: block;
+                    margin: auto;
+                    height: 1.5px;
+                    width: 0px;
+                    transition: all .8s;
+                    }
+                
+                &:hover:after {
+                    width: 100%;
+                    background: #333;
+                    }
+            }
+        } 
         .producto {        
             &:hover {
                 @include transform ();
