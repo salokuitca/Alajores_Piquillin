@@ -3,7 +3,7 @@
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
     transform: scale(1.05);
-                
+
 }
 
 @mixin transition {
@@ -14,8 +14,8 @@
 }
 
 @mixin transform-scale-and-up {
-    transform: scale(1.05,1.05);
-    transform:translateY(-25px);
+    transform: scale(1.05, 1.05);
+    transform: translateY(-25px);
 }
 
 @mixin transition-hover-social {

@@ -1,47 +1,36 @@
-.tabla-precios, h2 {
-  display: flex;
-  justify-content: center;
-}
-
+@charset "UTF-8";
 .tabla-precios .tabla tr td, .tabla-precios .tabla tr th {
   text-align: center;
   padding: 10px;
 }
 
+/* Inicialización de mi CSS*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*Estilos generales en etiqueta html*/
 html {
   scroll-behavior: smooth;
   overflow-x: hidden !important;
 }
 
+/*Estilos clase .body que se corresponde con la etiqueta body*/
 .body {
   background-color: white;
   font-family: "Quicksand", sans-serif;
   overflow-x: hidden !important;
 }
 
-/* Aumento de segundo en animate on scroll del modal promo */
+/* Aumento de segundos en animate on scroll del modal promo */
 .body [data-aos-delay="5000"] [data-aos],
 [data-aos][data-aos][data-aos-delay="5000"] {
   transition-delay: 5000ms;
 }
 
-.loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url("../images/alfajor.gif") 50% 50% no-repeat #f9f9f9;
-  background-size: cover;
-}
-
+/*Estilos del header*/
 .header-container .banner {
   background-image: url("../images/00banner.jpg");
   height: calc(100vh - 70px);
@@ -54,6 +43,7 @@ html {
   margin-top: 70px;
 }
 
+/*Estilo logo*/
 .logo {
   position: absolute;
   top: 90px;
@@ -68,11 +58,13 @@ html {
   animation-duration: 3s;
 }
 
+/*Estilos menu*/
 .imagen-menu {
   width: 45px;
   height: 45px;
 }
 
+/*Estilos del párrafo descriptivo*/
 .descripcion-general {
   margin: 6vw;
 }
@@ -91,6 +83,14 @@ html {
   text-align: center;
 }
 
+/*Estilo de h2*/
+h2 {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: teal;
+}
+
+/*Inicio estilos sección Productos (main)*/
 .producto {
   max-width: 400px;
 }
@@ -111,19 +111,9 @@ html {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-  padding-top: 80px;
-  padding-bottom: 20px;
-  color: teal;
-}
-
-.precios .promo {
-  padding: 20px;
-}
-.precios .promo img {
-  width: 100%;
-}
-
+/*Fin estilos sección Productos*/
+/*Inicio Estilos sección precios*/
+/*Estilos tabla*/
 .tabla-precios .tabla {
   border-collapse: collapse;
   border-radius: 5px 5px 0;
@@ -143,14 +133,19 @@ h2 {
 .tabla-precios .tabla tr th {
   background-color: coral;
 }
+/*Fin Estilos sección precios*/
+/*Estilos de promo modal*/
 .piquibola {
   width: 100%;
 }
 
+/*Inicio estilos sección envíos*/
 .pin {
   width: 20px;
 }
 
+/*Fin estilos sección envíos*/
+/*Inicio estilos sección Pedido*/
 .formulario {
   max-width: 700px !important;
   background-color: #fde6e4;
@@ -161,6 +156,8 @@ h2 {
   padding-left: 62px;
 }
 
+/*Fin estilos sección pedidos*/
+/*Inicio estilos sección contacto*/
 .social {
   -webkit-transition: 0.5s;
   -ms-transition: 0.5s;
@@ -186,11 +183,14 @@ h2 {
   padding: 20px;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: flex-end;
+/*Fin estilos sección contacto*/
+/*Estilos del footer*/
+footer {
+  height: 30px;
   background-color: #c4c4c4;
-  padding: 10px;
+}
+footer a img {
+  height: 20px;
 }
 
 /* Animacion Titulo */
@@ -204,40 +204,35 @@ h2 {
 }
 /* Inicio Medias Queries */
 /* Mobile Style */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 426px) {
+  /* Inicio Estilo mobile Sección Productos*/
   .imagenes-presentaciones img {
     margin: 5px;
   }
 
+  .descripcion-caja {
+    max-width: 30% !important;
+  }
   .descripcion-caja p {
     font-size: smaller;
   }
 
+  /* Fin Estilo mobile Sección Productos*/
+  /*Estilos mobile Sección Precios*/
   .tabla-precios .tabla {
     min-width: 200px;
   }
-
-  .footer-container {
-    justify-content: center;
-  }
 }
 /* Tablet Style */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  .muestra-productos-container img {
-    width: 33.3%;
-  }
-
-  .header-container img {
-    height: 50%;
-  }
-
-  .header-container h1 {
-    font-size: 25px;
-    top: 5%;
+@media only screen and (min-width: 427px) and (max-width: 960px) {
+  /*Estilo tablet Sección Producto*/
+  .descripcion-caja {
+    max-width: 30% !important;
   }
 }
 /* Desktop Style */
 @media only screen and (min-width: 961px) {
+  /*Estilo desktop navbar*/
   li a {
     color: black;
     text-decoration: none;
@@ -255,6 +250,7 @@ h2 {
     background: #333;
   }
 
+  /*Estilos desktop Sección Productos*/
   .producto:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
@@ -266,9 +262,11 @@ h2 {
     transition: all 0.3s;
   }
 
-  .precio-envios div {
-    padding: 25px;
+  /*Estilos desktop Sección Contacto*/
+  .datos-contacto {
+    max-width: 800px;
   }
 }
+/* Fin Medias Queries */
 
 /*# sourceMappingURL=style.css.map */
